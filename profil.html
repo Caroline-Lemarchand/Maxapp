@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profil – Max</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="profil.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="logo">Max</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Tableau de bord</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="education.html">Éducation</a></li>
+        <li><a href="tickets.html">Tickets Rest.</a></li>
+        <li><a href="profil.html" class="active">Profil</a></li>
+        <li><button id="logout-btn" class="logout">Déconnexion</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="profile-container animate-backinleft">
+    <div class="profile-card">
+      <img src="images/profil.jpg" id="photo-display" alt="Photo de profil" class="profile-pic" />
+      <form id="profil-form">
+        <label>Photo de profil :
+          <input type="file" id="photo" accept="image/*" />
+        </label>
+
+        <label>Prénom :
+          <input type="text" id="name" />
+        </label>
+
+        <label>Nom :
+          <input type="text" id="lastname" />
+        </label>
+
+        <label>Adresse e-mail :
+          <input type="email" id="email" disabled />
+        </label>
+
+        <label>Code secret :
+          <div class="password-field">
+            <input type="password" id="password" disabled />
+            <span class="eye" onclick="togglePassword()">👁️</span>
+          </div>
+        </label>
+
+        <label>Âge :
+          <input type="number" id="age" />
+        </label>
+
+        <label>Lieu de naissance :
+          <input type="text" id="birthplace" />
+        </label>
+
+        <button type="submit">Enregistrer</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

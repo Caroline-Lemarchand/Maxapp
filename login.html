@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion - Max</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+  <main class="login-container">
+    <h1>Créer ou se connecter à Max</h1>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+      <input type="password" id="password" placeholder="Mot de passe" required>
+      <input type="number" id="age" placeholder="Âge" required>
+      <input type="text" id="birthplace" placeholder="Lieu de naissance" required>
+      <button type="submit">Se connecter</button>
+    </form>
+    <p id="login-error" class="error-message"></p>
+  </main>
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const age = document.getElementById("age").value;
+      const birthplace = document.getElementById("birthplace").value;
+
+      const userData = {
+        username,
+        password,
+        age,
+        birthplace,
+        photo: ""
+      };
+      localStorage.setItem("userData", JSON.stringify(userData));
+      localStorage.setItem("loggedIn", "true");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

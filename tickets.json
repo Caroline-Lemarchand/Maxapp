@@ -1,0 +1,10 @@
+{
+  "solde": 34.20,
+  "depense_du_jour": 7.80,
+  "reste_jour": 10.00,
+  "transactions": [
+    { "nom": "Boulangerie Dupuis", "date": "2025-07-19", "heure": "12:15", "montant": 4.20 },
+    { "nom": "Le Panier Frais", "date": "2025-07-19", "heure": "09:30", "montant": 3.60 },
+    { "nom": "Pizza Max", "date": "2025-07-18", "heure": "19:45", "montant": 11.50 }
+  ]
+}

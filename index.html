@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Max – Tableau de bord</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="logo">Max</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Tableau de bord</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="education.html">Éducation</a></li>
+        <li><a href="tickets.html">Tickets Rest.</a></li>
+        <li><a href="profil.html">Profil</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="dashboard">
+    <div class="cards-row">
+      <div class="card green">
+        <p>💶 Solde actuel</p>
+        <h2>2 500 €</h2>
+      </div>
+      <div class="card blue">
+        <p>📈 Dépenses du mois</p>
+        <h2>1 200 €</h2>
+      </div>
+      <div class="card purple">
+        <p>🛡️ Limite mensuelle</p>
+        <h2>3 000 €</h2>
+      </div>
+    </div>
+    <div class="card full">
+      <h3>Graphique des dépenses</h3>
+      <canvas id="expensesChart" width="400" height="200"></canvas>
+    </div>
+    <div class="card full">
+      <h3>Accompagnement thérapeutique</h3>
+      <p>🧑‍⚕️ Votre prochain rendez-vous avec Dr. Martin est prévu pour le 20 avril</p>
+      <button>Prendre rendez-vous</button>
+    </div>
+    <div class="cards-row">
+      <div class="card">
+        <h3>Objectifs financiers</h3>
+        <p>Épargne mensuelle</p>
+        <progress value="300" max="500"></progress>
+        <p>300 € / 500 €</p>
+      </div>
+      <div class="card">
+        <h3>Conseils personnalisés</h3>
+        <ul>
+          <li>🔵 Définissez des objectifs d’épargne réalistes</li>
+          <li>🔵 Évitez les achats impulsifs en ligne</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script>
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "login.html";
+    }
+
+    const ctx = document.getElementById('expensesChart');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Alimentation', 'Loisirs', 'Transport', 'Santé'],
+        datasets: [{
+          data: [400, 300, 250, 250],
+          backgroundColor: ['#3b82f6', '#10b981', '#facc15', '#f472b6'],
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script>
+</body>
+</html>

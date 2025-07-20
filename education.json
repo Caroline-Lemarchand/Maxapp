@@ -1,0 +1,21 @@
+{
+  "modules": [
+    {
+      "titre": "Gestion budgétaire responsable",
+      "progression": 70
+    },
+    {
+      "titre": "Comprendre les comportements financiers",
+      "progression": 40
+    }
+  ],
+  "prochaine_session": {
+    "type": "webinaire",
+    "date": "2025-07-25",
+    "heure": "18:00"
+  },
+  "dernier_module_completé": {
+    "titre": "Bases du budget personnel",
+    "date": "2025-07-18"
+  }
+}

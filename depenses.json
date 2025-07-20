@@ -1,0 +1,14 @@
+{
+  "fixes": {
+    "loyer": 600,
+    "telephone": 50,
+    "eau": 40,
+    "electricite": 70
+  },
+  "variables": {
+    "alimentation": [200, 180, 190],
+    "transport": [100, 90, 110],
+    "loisirs": [150, 120, 130],
+    "shopping": [80, 60, 70]
+  }
+}
