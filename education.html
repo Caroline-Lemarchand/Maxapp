@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Max – Éducation</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
@@ -12,15 +12,43 @@
       <ul class="nav-menu">
         <li><a href="index.html">Tableau de bord</a></li>
         <li><a href="budget.html">Budget</a></li>
-        <li><a href="education.html">Éducation</a></li>
+        <li><a href="education.html" class="active">Éducation</a></li>
         <li><a href="tickets.html">Tickets Rest.</a></li>
         <li><a href="profil.html">Profil</a></li>
       </ul>
     </nav>
   </header>
-  <main class="dashboard">
-    <h2>Éducation</h2>
-    <p>Contenu éducatif sur la gestion financière.</p>
+  <main class="education-page">
+    <div class="card full">
+      <h2>Modules éducatifs</h2>
+      <div class="module">
+        <h3>Gestion budgétaire responsable</h3>
+        <progress value="70" max="100"></progress>
+        <p>70% complété</p>
+      </div>
+      <div class="module">
+        <h3>Comprendre les comportements financiers</h3>
+        <progress value="40" max="100"></progress>
+        <p>40% complété</p>
+      </div>
+    </div>
+    <div class="cards-row">
+      <div class="card green">
+        <h3>Prochaine session webinaire</h3>
+        <p>Mercredi 30 juillet à 18h</p>
+        <button>Inscription</button>
+      </div>
+      <div class="card blue">
+        <h3>Résultats du dernier module</h3>
+        <p>Gestion budgétaire responsable - 20 juillet</p>
+        <p>Score : 85%</p>
+      </div>
+    </div>
   </main>
+  <script>
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
