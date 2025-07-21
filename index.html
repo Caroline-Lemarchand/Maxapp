@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>Max – Tableau de bord</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -79,5 +80,12 @@
       }
     });
   </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('Service Worker enregistré', reg))
+      .catch(err => console.log('Échec du SW', err));
+  }
+</script>
 </body>
 </html>
