@@ -208,3 +208,118 @@ canvas {
     transform: translateX(0) scale(1);
   }
 }
+/* Cartes */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  flex: 1;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card.full {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.card.green {
+  border-left: 6px solid #10b981;
+}
+
+.card.blue {
+  border-left: 6px solid #3b82f6;
+}
+
+.card.purple {
+  border-left: 6px solid #8b5cf6;
+}
+
+/* Progress bar personnalisée */
+progress {
+  width: 100%;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #3b82f6;
+  border-radius: 10px;
+}
+
+/* Boutons */
+button {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Navigation active */
+.nav-menu li a.active {
+  font-weight: bold;
+  color: #3b82f6;
+  text-decoration: underline;
+}
+/* Agrandir titres généraux */
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+/* Taille des canvas (camemberts) par défaut */
+canvas {
+  max-width: 400px;
+  max-height: 250px;
+  width: 100%;
+  height: auto;
+}
+
+/* Adaptation mobile */
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 2.2rem;  /* Plus grand sur petit écran */
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  /* Réduire la taille des camemberts */
+  #pieFixes, #pieVariables, #lineChart {
+    max-width: 250px !important;
+    max-height: 200px !important;
+  }
+
+  /* Ajuster la mise en page en colonne pour mobiles */
+  .charts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .chart-box {
+    width: 100%;
+  }
+}
